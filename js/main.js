@@ -16,3 +16,11 @@ const photo = document.querySelector("#img");
 const imgBox = document.querySelector(".img-box");
 
 
+// make buttons and image box
+// hidden when program starts
+window.onload = function(){
+    download.style.display = "none";
+    reset.style.display = "none";
+    imgBox.style.display = "none";
+}
+

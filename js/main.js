@@ -84,3 +84,7 @@ filters.forEach(filter => {
     });
 });
 
+// Dwonload photo
+download.onclick = function(){
+    download.href = photo.src;
+}

@@ -25,11 +25,15 @@ window.onload = function(){
 }
 
 
+// When upload image
 upload.onchange = function(){
+
+    // show buttons 
     download.style.display = "block";
     reset.style.display = "block";
     imgBox.style.display = "block";
 
+    // upload (reading) the image
     let file = new FileReader();
     file.readAsDataURL(upload.files[0]);
 

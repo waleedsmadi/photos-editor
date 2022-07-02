@@ -7,4 +7,56 @@
 }
 
 
+body{
+    background-color: #333;
+}
 
+.container{
+    width: 80vw;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 5fr 3fr;
+}
+
+.img{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+.img img{
+    max-width: 45vw;
+    max-height: 60vh;
+}
+
+.upload input{display: none;}
+
+.upload label{
+    padding: 10px 20px;
+    color: white;
+    border: 2px dashed white;
+    cursor: pointer;
+}
+
+.filters ul, .filters ul li{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    color: white;
+    direction: rtl;
+}
+
+.filters ul li:last-child{
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.filters ul li a,
+.filters ul li span{
+    padding: 10px 20px;
+    background-color: #060;
+    cursor: pointer;
+}

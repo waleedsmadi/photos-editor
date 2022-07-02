@@ -24,3 +24,16 @@ window.onload = function(){
     imgBox.style.display = "none";
 }
 
+
+upload.onchange = function(){
+    download.style.display = "block";
+    reset.style.display = "block";
+    imgBox.style.display = "block";
+
+    let file = new FileReader();
+    file.readAsDataURL(upload.files[0]);
+
+    file.onload = function(){
+        photo.src = file.result;
+    }
+}

@@ -41,3 +41,25 @@ upload.onchange = function(){
         photo.src = file.result;
     }
 }
+
+// array of filters
+const filters = Array.from(document.querySelectorAll(".filters ul li"));
+
+filters.forEach(filter => {
+
+    // add an event for change filter
+    filter.addEventListener("input", function(){
+        photo.style.filter = `
+
+        saturate(${saturate.value}%)
+        contrast(${contrast.value}%)
+        brightness(${brightness.value}%)
+        sepia(${sepia.value}%)
+        grayscale(${grayscale.value})
+        blur(${blur.value}px)
+        hue-rotate(${hueRotate.value}deg)
+        
+        `;
+    });
+});
+

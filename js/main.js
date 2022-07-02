@@ -16,6 +16,23 @@ const photo = document.querySelector("#img");
 const imgBox = document.querySelector(".img-box");
 
 
+
+// Reset function
+function resetValues(){
+    photo.style.filter = "none";
+    saturate.value = '100';
+    contrast.value = '100';
+    brightness.value = '100';
+    sepia.value = '0';
+    grayscale.value = '0';
+    blur.value = '0';
+    hueRotate.value = '0';
+}
+
+reset.onclick = function(){
+    resetValues();
+}
+
 // make buttons and image box
 // hidden when program starts
 window.onload = function(){
@@ -27,6 +44,10 @@ window.onload = function(){
 
 // When upload image
 upload.onchange = function(){
+
+    //reset values
+    resetValues();
+
 
     // show buttons 
     download.style.display = "block";
